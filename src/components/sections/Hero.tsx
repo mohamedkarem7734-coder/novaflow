@@ -11,7 +11,7 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
           <div className="max-w-xl">
             <div className="mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-nova-500" />

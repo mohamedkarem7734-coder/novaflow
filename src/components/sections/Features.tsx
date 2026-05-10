@@ -195,9 +195,9 @@ function MiniDevicesPreview() {
   return (
     <div className="flex items-center justify-center gap-4">
       {[
-        { icon: "🖥", label: "Desktop", active: true },
-        { icon: "📱", label: "Mobile", active: true },
-        { icon: "📟", label: "Tablet", active: false },
+        { label: "Desktop", active: true },
+        { label: "Mobile", active: true },
+        { label: "Tablet", active: false },
       ].map(({ label, active }) => (
         <div key={label} className="flex flex-col items-center gap-1.5">
           <div className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm transition-all duration-300 ${
@@ -347,7 +347,7 @@ export default function Features() {
                 key={f.title}
                 className={`group relative rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04] hover:shadow-lg hover:shadow-nova-500/5 md:col-span-2 ${f.span} ${
                   isWide ? "lg:col-span-3" : ""
-                } ${isSmall ? "" : ""}`}
+                }`}
                 style={{ animationDelay: `${i * 100}ms` }}
               >
                 {isWide && (

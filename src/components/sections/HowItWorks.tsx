@@ -206,36 +206,18 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="hidden items-start lg:flex lg:gap-3 xl:gap-6">
+        <div className="relative hidden items-start lg:flex lg:gap-3 xl:gap-6">
+          <div className="pointer-events-none absolute inset-x-0 top-12 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-nova-500/20 to-transparent" />
           {steps.map((step, i) => (
-            <div key={step.number} className="flex-1">
+            <div key={step.number} className="relative flex-1">
+              {i > 0 && (
+                <div className="absolute -left-[calc(1.5rem+1px)] top-5 hidden h-px w-[calc(1.5rem+1px)] bg-nova-500/15 xl:-left-[calc(1.5rem+1px)] xl:w-[calc(1.5rem+1px)] lg:block" />
+              )}
               <StepCard {...step}>
                 {previews[i]}
               </StepCard>
             </div>
           ))}
-          <div className="pointer-events-none absolute inset-x-0 top-[calc(50%-20rem)] mx-auto hidden h-px max-w-5xl lg:block">
-            <div className="relative h-full w-full">
-              <svg
-                viewBox="0 0 1100 1"
-                className="absolute inset-0 h-full w-full"
-                preserveAspectRatio="none"
-              >
-                <defs>
-                  <linearGradient id="connectorLine" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#4f46e5" stopOpacity="0" />
-                    <stop offset="15%" stopColor="#4f46e5" stopOpacity="0.15" />
-                    <stop offset="35%" stopColor="#4f46e5" stopOpacity="0.25" />
-                    <stop offset="50%" stopColor="#4f46e5" stopOpacity="0.15" />
-                    <stop offset="65%" stopColor="#4f46e5" stopOpacity="0.25" />
-                    <stop offset="85%" stopColor="#4f46e5" stopOpacity="0.15" />
-                    <stop offset="100%" stopColor="#4f46e5" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <line x1="0" y1="0.5" x2="1100" y2="0.5" stroke="url(#connectorLine)" strokeWidth="1" />
-              </svg>
-            </div>
-          </div>
         </div>
       </div>
     </section>
