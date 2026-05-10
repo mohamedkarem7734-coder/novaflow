@@ -1,5 +1,17 @@
 import Hero from "@/components/sections/Hero"
+import Features from "@/components/sections/Features"
+import HowItWorks from "@/components/sections/HowItWorks"
+import Testimonials from "@/components/sections/Testimonials"
+import Pricing from "@/components/sections/Pricing"
 
 export default function Home() {
-  return <Hero />
+  return (
+    <>
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Testimonials />
+      <Pricing />
+    </>
+  )
 }
