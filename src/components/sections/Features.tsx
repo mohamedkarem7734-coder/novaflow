@@ -111,7 +111,7 @@ function MiniTaskPreview() {
     { label: "Sprint planning notes", done: false },
   ]
   return (
-    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3">
+    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 max-xs:p-2 xs:p-3">
       <div className="mb-2 flex items-center justify-between">
         <span className="text-[11px] font-semibold text-dark-300 uppercase tracking-wider">Today</span>
         <span className="text-[10px] text-dark-600">4 tasks</span>
@@ -147,7 +147,7 @@ function MiniActivityPreview() {
   return (
     <div className="space-y-2">
       {items.map(({ name, action, target, avatar, color }) => (
-        <div key={name} className="flex items-center gap-2.5 rounded-lg p-2 transition-colors hover:bg-white/[0.03]">
+        <div key={name} className="flex items-center gap-2.5 rounded-lg p-2 max-xs:p-1.5 xs:p-2 transition-colors hover:bg-white/[0.03]">
           <div className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${color} text-[9px] font-bold text-white`}>
             {avatar}
           </div>
@@ -167,10 +167,10 @@ function MiniActivityPreview() {
 function MiniFlowPreview() {
   const steps = ["Trigger", "Process", "Action"]
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
       {steps.map((step, i) => (
-        <div key={step} className="flex flex-1 items-center gap-2">
-          <div className="flex flex-1 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2.5">
+        <div key={step} className="flex min-w-0 flex-1 items-center gap-2">
+          <div className="flex min-w-0 flex-1 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.02] px-2 py-2 max-xs:py-1.5 xs:py-2 sm:px-3 sm:py-2.5">
             <div className="flex items-center gap-2">
               <div className={`flex h-5 w-5 items-center justify-center rounded text-[10px] font-bold ${
                 i === 1 ? "bg-nova-500/20 text-nova-400" : "bg-white/[0.05] text-dark-500"
@@ -193,14 +193,14 @@ function MiniFlowPreview() {
 
 function MiniDevicesPreview() {
   return (
-    <div className="flex items-center justify-center gap-4">
+    <div className="flex items-center justify-center gap-4 max-xs:gap-3 xs:gap-4">
       {[
         { label: "Desktop", active: true },
         { label: "Mobile", active: true },
         { label: "Tablet", active: false },
       ].map(({ label, active }) => (
         <div key={label} className="flex flex-col items-center gap-1.5">
-          <div className={`flex h-9 w-9 items-center justify-center rounded-lg text-sm transition-all duration-300 ${
+          <div className={`flex h-9 w-9 max-xs:h-8 max-xs:w-8 xs:h-9 xs:w-9 items-center justify-center rounded-lg text-sm transition-all duration-300 ${
             active
               ? "border border-nova-500/30 bg-nova-500/10"
               : "border border-white/[0.04] bg-white/[0.01] opacity-50"
@@ -242,7 +242,7 @@ function MiniChartPreview() {
   ]
   const max = 92
   return (
-    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3">
+    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 max-xs:p-2 xs:p-3">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-[11px] font-semibold text-dark-300 uppercase tracking-wider">This Week</span>
         <span className="flex items-center gap-1 text-[10px] text-emerald-400">
@@ -253,7 +253,7 @@ function MiniChartPreview() {
           +12.3%
         </span>
       </div>
-      <div className="flex items-end justify-between gap-1.5" style={{ height: 40 }}>
+      <div className="flex items-end justify-between gap-1.5 max-xs:h-8 xs:h-10">
         {bars.map(({ label, value }) => (
           <div key={label} className="flex flex-1 flex-col items-center gap-1">
             <div
@@ -280,7 +280,7 @@ function MiniAIPreview() {
     "Flag bottlenecks in the design pipeline",
   ]
   return (
-    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3">
+    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 max-xs:p-2 xs:p-3">
       <div className="mb-2 flex items-center gap-1.5">
         <div className="flex h-4 w-4 items-center justify-center rounded bg-nova-500/20 text-[9px] text-nova-400">
           <svg width="10" height="10" viewBox="0 0 20 20" fill="none">
@@ -291,9 +291,9 @@ function MiniAIPreview() {
       </div>
       <div className="space-y-1.5">
         {suggestions.map((text) => (
-          <div key={text} className="flex items-start gap-2 rounded-md px-2 py-1.5 transition-colors hover:bg-white/[0.03]">
+          <div key={text} className="flex items-start gap-2 rounded-md px-2 py-1.5 max-xs:px-1.5 max-xs:py-1 xs:px-2 xs:py-1.5 transition-colors hover:bg-white/[0.03]">
             <div className="mt-0.5 h-1.5 w-1.5 shrink-0 rounded-full bg-nova-500/40" />
-            <span className="text-[11px] leading-relaxed text-dark-400">{text}</span>
+            <span className="text-[11px] leading-relaxed text-dark-400 max-xs:text-[10px] xs:text-[11px]">{text}</span>
           </div>
         ))}
       </div>
@@ -312,14 +312,14 @@ const previewMap = {
 
 export default function Features() {
   return (
-    <section id="features" className="relative overflow-hidden px-6 pb-28 sm:pb-36 lg:pb-44">
+    <section id="features" className="relative overflow-hidden px-6 max-xs:pb-20 xs:pb-28 sm:pb-36 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/3 right-1/4 h-[450px] w-[450px] rounded-full bg-nova-500/8 blur-[120px]" />
         <div className="absolute bottom-1/4 left-1/3 h-[300px] w-[300px] rounded-full bg-nova-400/5 blur-[100px]" />
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center max-xs:mb-10 xs:mb-16">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
             Features
           </div>
@@ -329,13 +329,13 @@ export default function Features() {
               move faster
             </span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-dark-400">
+          <p className="mt-4 max-xs:text-sm xs:text-base leading-relaxed text-dark-400">
             NovaFlow combines task management, automation, and analytics into one
             seamless experience.
           </p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 max-xs:gap-3 xs:gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-4">
           {features.map((f, i) => {
             const Icon = iconMap[i]
             const Preview = previewMap[f.preview as keyof typeof previewMap]
@@ -345,7 +345,7 @@ export default function Features() {
             return (
               <div
                 key={f.title}
-                className={`group relative rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04] hover:shadow-lg hover:shadow-nova-500/5 md:col-span-2 ${f.span} ${
+                className={`group relative rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 max-xs:p-4 xs:p-5 transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04] hover:shadow-lg hover:shadow-nova-500/5 md:col-span-2 ${f.span} ${
                   isWide ? "lg:col-span-3" : ""
                 }`}
                 style={{ animationDelay: `${i * 100}ms` }}
@@ -354,12 +354,12 @@ export default function Features() {
                   <div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-gradient-to-r from-nova-600/5 via-transparent to-nova-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 )}
                 <div className={`flex h-full flex-col ${isWide ? "lg:flex-row lg:items-center lg:gap-10" : ""}`}>
-                  <div className={`${isWide ? "lg:w-1/2" : ""} ${isSmall ? "" : "mb-5"}`}>
+                  <div className={`${isWide ? "lg:w-1/2" : ""} ${isSmall ? "" : "mb-5 max-xs:mb-3 xs:mb-4"}`}>
                     <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.06] bg-white/[0.03] text-nova-400 transition-all duration-300 group-hover:border-nova-500/30 group-hover:bg-nova-500/10 group-hover:text-nova-300">
                       <Icon />
                     </div>
                     <h3 className={`font-semibold text-white ${isSmall ? "text-sm" : "text-base"}`}>{f.title}</h3>
-                    <p className={`mt-1.5 leading-relaxed text-dark-400 ${isSmall ? "text-xs" : "text-sm"}`}>
+                    <p className={`mt-1.5 leading-relaxed text-dark-400 ${isSmall ? "text-xs" : "text-sm max-xs:text-xs"}`}>
                       {f.description}
                     </p>
                   </div>

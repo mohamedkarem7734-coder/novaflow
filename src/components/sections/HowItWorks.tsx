@@ -90,7 +90,7 @@ function MiniAutomatePreview() {
 
 function MiniTrackPreview() {
   return (
-    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3">
+    <div className="rounded-lg border border-white/[0.06] bg-white/[0.02] p-3 max-xs:p-2">
       <div className="mb-3 flex items-center justify-between">
         <span className="text-[11px] font-semibold text-dark-300 uppercase tracking-wider">Project Health</span>
         <span className="flex items-center gap-1 text-[10px] text-emerald-400">
@@ -154,7 +154,7 @@ function StepCard({ number, title, description, children }: {
   children: React.ReactNode
 }) {
   return (
-    <div className="group relative rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 transition-all duration-500 hover:border-white/[0.12] hover:shadow-lg hover:shadow-nova-500/5">
+    <div className="group relative rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 max-xs:p-4 transition-all duration-500 hover:border-white/[0.12] hover:shadow-lg hover:shadow-nova-500/5">
       <div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-gradient-to-b from-nova-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="mb-4 flex items-center gap-4">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-nova-500/20 bg-nova-500/10 text-sm font-bold text-nova-400 transition-all duration-300 group-hover:bg-nova-500/20 group-hover:text-nova-300">
@@ -162,7 +162,7 @@ function StepCard({ number, title, description, children }: {
         </div>
         <h3 className="text-base font-semibold text-white sm:text-lg">{title}</h3>
       </div>
-      <p className="mb-5 text-sm leading-relaxed text-dark-400">{description}</p>
+      <p className="text-sm leading-relaxed text-dark-400 max-xs:text-xs mb-5 max-xs:mb-3">{description}</p>
       {children}
     </div>
   )
@@ -170,7 +170,7 @@ function StepCard({ number, title, description, children }: {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative overflow-hidden px-6 pb-28 sm:pb-36 lg:pb-44">
+    <section id="how-it-works" className="relative overflow-hidden px-6 pb-28 max-xs:pb-20 sm:pb-36 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/3 left-1/4 h-[400px] w-[400px] rounded-full bg-nova-600/8 blur-[120px]" />
         <div className="absolute bottom-1/3 right-1/4 h-[300px] w-[300px] rounded-full bg-nova-400/5 blur-[100px]" />
@@ -178,7 +178,7 @@ export default function HowItWorks() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center max-xs:mb-10 xs:mb-16">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
             How it works
           </div>
@@ -189,7 +189,7 @@ export default function HowItWorks() {
             </span>{" "}
             in three steps
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-dark-400">
+          <p className="mt-4 text-base leading-relaxed text-dark-400 max-xs:text-sm xs:text-base">
             NovaFlow adapts to how your team works — no complex setup, no
             training required.
           </p>

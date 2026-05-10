@@ -67,10 +67,10 @@ function StatsCard({ label, value, change, up, index }: {
     >
       <p className="mb-2 text-[11px] font-medium tracking-wider text-dark-500 uppercase">{label}</p>
       <p className="text-xl font-bold tracking-tight text-white">{value}</p>
-      <div className={`mt-1.5 flex items-center gap-1 ${up ? "text-emerald-400" : "text-red-400"}`}>
-        <span className="flex items-center">{up ? <TrendUp /> : <TrendDown />}</span>
-        <span className="text-[11px] font-medium">{change}</span>
-        <span className="ml-auto text-[10px] text-dark-600">vs last mo.</span>
+      <div className={`mt-1.5 flex flex-wrap items-center gap-x-1.5 ${up ? "text-emerald-400" : "text-red-400"}`}>
+        <span className="flex items-center shrink-0">{up ? <TrendUp /> : <TrendDown />}</span>
+        <span className="text-[11px] font-medium shrink-0">{change}</span>
+        <span className="text-[10px] text-dark-600">vs last mo.</span>
       </div>
     </div>
   )
@@ -81,13 +81,13 @@ function Chart() {
   const area = `M0,112 L${points} L360,140 L0,140 Z`
 
   return (
-    <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
-      <div className="mb-4 flex items-center justify-between">
+    <div className="overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <div>
           <p className="text-sm font-semibold text-white">Monthly Activity</p>
           <p className="mt-0.5 text-xs text-dark-500">Jan – Jun 2026</p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 sm:gap-4">
           <span className="flex items-center gap-1.5 text-xs text-dark-400">
             <span className="h-2 w-2 rounded-full bg-nova-500" />
             Current

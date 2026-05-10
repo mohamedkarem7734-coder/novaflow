@@ -75,7 +75,7 @@ function TestimonialCard({ quote, name, role, company, avatar, gradient, index }
 }) {
   return (
     <div
-      className="group relative flex flex-col rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 transition-all duration-500 hover:border-white/[0.12] hover:shadow-xl hover:shadow-nova-500/5 sm:p-7"
+      className="group relative flex flex-col rounded-2xl border border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] p-6 max-xs:p-4 xs:p-6 transition-all duration-500 hover:border-white/[0.12] hover:shadow-xl hover:shadow-nova-500/5 sm:p-7"
       style={{ animationDelay: `${index * 120}ms` }}
     >
       <div className="pointer-events-none absolute inset-0 -z-10 rounded-2xl bg-gradient-to-b from-nova-500/3 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
@@ -87,7 +87,7 @@ function TestimonialCard({ quote, name, role, company, avatar, gradient, index }
         <StarRating />
       </div>
 
-      <blockquote className="mb-6 flex-1 text-sm leading-relaxed text-dark-300 sm:text-base sm:leading-relaxed">
+      <blockquote className="mb-6 flex-1 text-sm max-xs:text-xs leading-relaxed text-dark-300 xs:text-sm sm:text-base sm:leading-relaxed">
         &ldquo;{quote}&rdquo;
       </blockquote>
 
@@ -108,7 +108,7 @@ function TestimonialCard({ quote, name, role, company, avatar, gradient, index }
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative overflow-hidden px-6 pb-28 sm:pb-36 lg:pb-44">
+    <section id="testimonials" className="relative overflow-hidden px-6 pb-28 max-xs:pb-20 sm:pb-36 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/4 right-1/3 h-[400px] w-[400px] rounded-full bg-nova-500/8 blur-[120px]" />
         <div className="absolute bottom-1/4 left-1/3 h-[350px] w-[350px] rounded-full bg-nova-400/5 blur-[100px]" />
@@ -133,7 +133,7 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-16">
+        <div className="mx-auto max-w-2xl text-center max-xs:mb-10 xs:mb-14 sm:mb-16">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
             Testimonials
           </div>
@@ -143,7 +143,7 @@ export default function Testimonials() {
               ship faster
             </span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-dark-400">
+          <p className="mt-4 text-base leading-relaxed text-dark-400 max-xs:text-sm xs:text-base">
             See how teams are using NovaFlow to streamline their workflows and
             deliver better results.
           </p>

@@ -2,7 +2,7 @@ import DashboardMockup from "@/components/ui/DashboardMockup"
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pt-24 pb-28 sm:pt-28 sm:pb-36 lg:pt-32 lg:pb-44">
+    <section className="relative overflow-hidden px-6 pt-24 pb-28 max-xs:pb-20 xs:pb-28 sm:pt-28 sm:pb-36 lg:pt-32 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-48 left-1/3 h-[600px] w-[600px] rounded-full bg-nova-600/10 blur-[140px]" />
         <div className="absolute -bottom-48 right-1/4 h-[500px] w-[500px] rounded-full bg-nova-500/8 blur-[120px]" />
@@ -26,7 +26,7 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="mb-10 text-base leading-relaxed text-dark-400 sm:text-lg sm:leading-relaxed">
+            <p className="mb-10 text-base leading-relaxed text-dark-400 max-xs:text-sm xs:text-base sm:text-lg sm:leading-relaxed">
               NovaFlow connects your tools, streamlines your processes, and
               eliminates busywork — so your team can focus on what&nbsp;matters.
             </p>
@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative lg:justify-self-end lg:-mr-4">
+          <div className="relative overflow-hidden lg:justify-self-end lg:-mr-4">
             <div className="absolute -inset-10 rounded-[32px] bg-gradient-to-b from-nova-600/8 via-nova-500/4 to-transparent opacity-80 blur-3xl" />
             <div className="relative animate-fade-in [animation-delay:200ms] [animation-duration:600ms] lg:scale-105">
               <DashboardMockup />

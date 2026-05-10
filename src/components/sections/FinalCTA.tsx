@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden px-6 pb-28 sm:pb-36 lg:pb-44">
+    <section className="relative overflow-hidden px-6 pb-28 max-xs:pb-20 sm:pb-36 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-nova-600/10 blur-[140px]" />
         <div className="absolute left-1/2 top-1/3 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-nova-500/8 blur-[100px]" />
@@ -8,7 +8,7 @@ export default function FinalCTA() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="relative overflow-hidden rounded-3xl border border-nova-500/20 bg-gradient-to-b from-nova-500/[0.08] via-nova-500/[0.03] to-transparent px-8 py-16 shadow-2xl shadow-nova-500/10 sm:px-12 sm:py-20 lg:px-20 lg:py-24">
+        <div className="relative overflow-hidden rounded-3xl border border-nova-500/20 bg-gradient-to-b from-nova-500/[0.08] via-nova-500/[0.03] to-transparent px-6 py-14 max-xs:px-4 max-xs:py-10 xs:px-6 xs:py-14 shadow-2xl shadow-nova-500/10 sm:px-12 sm:py-20 lg:px-20 lg:py-24">
           <div className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute -top-40 -right-20 h-[300px] w-[300px] rounded-full bg-nova-400/10 blur-[100px]" />
             <div className="absolute -bottom-20 -left-20 h-[250px] w-[250px] rounded-full bg-nova-600/10 blur-[80px]" />
@@ -27,7 +27,7 @@ export default function FinalCTA() {
               ?
             </h2>
 
-            <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-dark-400">
+            <p className="mx-auto mb-10 max-w-lg text-base leading-relaxed text-dark-400 max-xs:text-sm xs:text-base">
               Join thousands of teams already using NovaFlow to automate their
               work, collaborate better, and ship faster than ever.
             </p>

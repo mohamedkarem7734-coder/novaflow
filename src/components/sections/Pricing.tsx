@@ -70,7 +70,7 @@ function PricingCard({ plan, index }: { plan: (typeof plans)[number]; index: num
 
   return (
     <div
-      className={`group relative flex flex-col rounded-2xl border p-7 transition-all duration-500 ${
+      className={`group relative flex flex-col rounded-2xl border p-7 max-xs:p-4 xs:p-6 sm:p-7 transition-all duration-500 ${
         isPopular
           ? "border-nova-500/40 bg-gradient-to-b from-nova-500/[0.06] to-white/[0.02] shadow-lg shadow-nova-500/10 hover:border-nova-500/60 hover:shadow-xl hover:shadow-nova-500/15"
           : "border-white/[0.06] bg-gradient-to-b from-white/[0.03] to-white/[0.01] hover:border-white/[0.12] hover:shadow-lg hover:shadow-nova-500/5"
@@ -135,14 +135,14 @@ function PricingCard({ plan, index }: { plan: (typeof plans)[number]; index: num
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="relative overflow-hidden px-6 pb-28 sm:pb-36 lg:pb-44">
+    <section id="pricing" className="relative overflow-hidden px-6 pb-28 max-xs:pb-20 sm:pb-36 lg:pb-44">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute top-1/3 left-1/3 h-[450px] w-[450px] rounded-full bg-nova-500/8 blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 h-[350px] w-[350px] rounded-full bg-nova-400/5 blur-[100px]" />
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-14 max-w-2xl text-center sm:mb-16">
+        <div className="mx-auto max-w-2xl text-center max-xs:mb-10 xs:mb-14 sm:mb-16">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
             Pricing
           </div>
@@ -152,7 +152,7 @@ export default function Pricing() {
               No surprises.
             </span>
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-dark-400">
+          <p className="mt-4 text-base leading-relaxed text-dark-400 max-xs:text-sm xs:text-base">
             Start free, upgrade when you need more. All plans include a 14-day
             free trial with no credit card required.
           </p>
