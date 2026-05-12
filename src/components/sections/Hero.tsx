@@ -11,9 +11,9 @@ export default function Hero() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          <div className="max-w-xl">
-            <div className="mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
+        <div className="flex flex-col items-center">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-6 mx-auto inline-flex animate-fade-in items-center gap-2 rounded-full border border-nova-500/20 bg-nova-500/8 px-4 py-1.5 text-xs font-medium text-nova-300">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-nova-500" />
               Now in public beta
             </div>
@@ -31,7 +31,7 @@ export default function Hero() {
               eliminates busywork — so your team can focus on what&nbsp;matters.
             </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
               <button className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-nova-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-nova-600/20 transition-all duration-300 hover:bg-nova-500 hover:shadow-nova-500/30 active:scale-[0.97]">
                 <span className="relative z-10">Start free trial</span>
                 <div className="absolute inset-0 -translate-x-full transform bg-gradient-to-r from-transparent via-white/12 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
@@ -44,7 +44,7 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="mt-12 flex items-center gap-5">
+            <div className="mt-12 flex items-center justify-center gap-5">
               <div className="flex -space-x-2.5">
                 {["SC", "ML", "AT", "JW"].map((initials) => (
                   <div
@@ -66,10 +66,12 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden lg:justify-self-end lg:-mr-4">
-            <div className="absolute -inset-10 rounded-[32px] bg-gradient-to-b from-nova-600/8 via-nova-500/4 to-transparent opacity-80 blur-3xl" />
-            <div className="relative animate-fade-in [animation-delay:200ms] [animation-duration:600ms] lg:scale-105">
-              <DashboardMockup />
+          <div className="mt-16 w-full max-w-6xl">
+            <div className="relative overflow-hidden">
+              <div className="absolute -inset-10 rounded-[32px] bg-gradient-to-b from-nova-600/8 via-nova-500/4 to-transparent opacity-80 blur-3xl" />
+              <div className="relative animate-fade-in [animation-delay:200ms] [animation-duration:600ms] lg:scale-110">
+                <DashboardMockup />
+              </div>
             </div>
           </div>
         </div>
